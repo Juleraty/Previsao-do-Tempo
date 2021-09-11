@@ -19,7 +19,8 @@ if x['cod'] != '404':
     #Traduzindo a descricao para portugues
     weather_descr = (z[0]['description'])
     translation = translator.translate(weather_descr, dest='pt')
-
+    
+    #Temperatura é dada em Kelvins, a formula é para transformar em Celsius
     print('Temperatura: ' +str(round(concurrent_temp-273))+'°C',
           '/\nPressao: ' + str(concurrent_pres)+'hPa',
           '\nHumidade: ' + str(concurrent_hum)+'%',
