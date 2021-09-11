@@ -3,7 +3,7 @@ from googletrans import Translator
 translator = Translator()
 api_key = "Sua API"
 base_url = ("http://api.openweathermap.org/data/2.5/weather?")
-city_name = ("Cidade")
+city_name = ("Sua Cidade")
 complete_url = str(base_url + "q=" + city_name + '&appid=' + api_key)
 response = requests.get(complete_url)
 
