@@ -22,7 +22,7 @@ if x['cod'] != '404':
     
     #Temperatura no site é dada em Kelvins, a formula usada é para transformar em Celsius
     print('Temperatura: ' +str(round(concurrent_temp-273))+'°C',
-          '/\nPressao: ' + str(concurrent_pres)+'hPa',
+          '\nPressao: ' + str(concurrent_pres)+'hPa',
           '\nHumidade: ' + str(concurrent_hum)+'%',
           '\nPrevisao: ' + (translation.text))
 else:
