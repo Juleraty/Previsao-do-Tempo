@@ -14,6 +14,11 @@ if x['cod'] != '404':
     concurrent_temp = y['temp']
     concurrent_pres = y['pressure']
     concurrent_hum = y['humidity']
+    
+    city = x['name']
+    s = x['sys']
+    country = s['country']
+    z = x['weather']
 
     z = x['weather']
     #Traduzindo a descricao para portugues
@@ -21,7 +26,8 @@ if x['cod'] != '404':
     translation = translator.translate(weather_descr, dest='pt')
     
     #Temperatura no site é dada em Kelvins, a formula usada é para transformar em Celsius
-    print('Temperatura: ' +str(round(concurrent_temp-273))+'°C',
+    print('Cidade:'+city+','+country,
+          '\nTemperatura: ' +str(round(concurrent_temp-273))+'°C',
           '\nPressao: ' + str(concurrent_pres)+'hPa',
           '\nHumidade: ' + str(concurrent_hum)+'%',
           '\nPrevisao: ' + (translation.text))
