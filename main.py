@@ -2,9 +2,9 @@ import requests
 from googletrans import Translator
 
 translator = Translator()
-api_key = "5f250f4b4a9e7da478c8f060bc013a18"
+api_key = "API"
 base_url = ("http://api.openweathermap.org/data/2.5/weather?")
-city_name = ("Duque de caxias")
+city_name = ("cidade")
 complete_url = str(base_url + "q=" + city_name + '&appid=' + api_key)
 response = requests.get(complete_url)
 
